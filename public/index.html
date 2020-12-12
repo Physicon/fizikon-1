@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Витрина">
+    <meta name="keywords">
+    <meta name="author" content="">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel="alternate" type="application/rss+xml" href="http://imumk.ru/newsrss" title="Your title">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/css/main.css?5274329">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/css/fs.css?5274328">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/burger/burger.css">
+    <link href="https://www.imumk.ru/Content/skins/bubble/lightbox.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/index_popup.css"> 
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/manual_popup.css">
+    <style>
+        /** {
+            margin: 0;
+            padding: 0;
+        }*/
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        .l-footer {
+            flex: 0 0 auto;
+        }
+
+        .login-modal-body-msg, .register-modal-body-msg {
+            border: 0;
+            background: none;
+            margin: 0 1em;
+        }
+
+        .register-modal-body {
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .login-modal-body {
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .validation-summary-errors {
+            border: 0;
+            background: none;
+        }
+
+            .validation-summary-errors ul {
+                list-style-type: none;
+                text-align: center;
+                padding: 0;
+            }
+
+            .validation-summary-errors li {
+                color: red;
+                margin-bottom: 5px;
+            }
+
+        .login-modal-body fieldset {
+            border: 0;
+        }
+
+        .u-mt-100-resp50 {
+            margin-top: 100px;
+        }
+
+        .u-spacer-150-resp50 {
+            height: 150px;
+        }
+
+        @media screen and (max-width:48em) {
+            .u-mt-100-resp50 {
+                margin-top: 50px;
+            }
+
+            .u-spacer-150-resp50 {
+                height: 50px;
+            }
+        }
+
+        .register-modal-header-title, .login-modal-header-title {
+            margin: 0.67em 0;
+            font-weight: 300;
+            font-size: 32px;
+            color: #3c3c3b;
+            display: block;
+            margin-top: 48px;
+            text-align: center;
+        }
+
+
+        @media screen and (min-width: 58em) {
+            .header-nav > .header-btn {
+                float: left;
+                width: 145px;
+            }
+
+
+            .header-nav {
+                float: right;
+                padding: 17px 0 0 0px;
+            }
+
+
+                .header-nav > .header-cart {
+                    float: left;
+                    margin-left: 5px;
+                }
+        }
+    </style>
+    <style>
+      .borderFind{
+          padding: .3em .5em;
+          height: 2.3em;
+          background-color: #fff;
+          border: 1px solid #706f6f;
+      }
+      #InfoH1{
+          font-size:24px;
+          font-weight: 300;
+          color: #3c3c3b;
+      }
+      @media screen and (max-width: 58em) {
+          .header-nav a[href='/showcase']{
+              display:none !important;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="wrapper">
+        <div id="app" ></div>
+    </div>
+    <!-- built files will be auto injected -->
+    
+  </body>
+</html>

@@ -1,0 +1,1826 @@
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Витрина">
+    <meta name="keywords">
+    <meta name="author" content="">
+    <title>Витрина </title>
+
+    <link rel="alternate" type="application/rss+xml" href="http://imumk.ru/newsrss" title="Your title">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/css/main.css?5274329">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/css/fs.css?5274328">
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/burger/burger.css">
+    <link href="https://www.imumk.ru/Content/skins/bubble/lightbox.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/index_popup.css"> 
+    <link rel="stylesheet" href="https://www.imumk.ru/Content/skins/bubble/manual_popup.css">
+
+    
+    <style>
+        /** {
+            margin: 0;
+            padding: 0;
+        }*/
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        .l-footer {
+            flex: 0 0 auto;
+        }
+
+        .login-modal-body-msg, .register-modal-body-msg {
+            border: 0;
+            background: none;
+            margin: 0 1em;
+        }
+
+        .register-modal-body {
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .login-modal-body {
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .validation-summary-errors {
+            border: 0;
+            background: none;
+        }
+
+            .validation-summary-errors ul {
+                list-style-type: none;
+                text-align: center;
+                padding: 0;
+            }
+
+            .validation-summary-errors li {
+                color: red;
+                margin-bottom: 5px;
+            }
+
+        .login-modal-body fieldset {
+            border: 0;
+        }
+
+        .u-mt-100-resp50 {
+            margin-top: 100px;
+        }
+
+        .u-spacer-150-resp50 {
+            height: 150px;
+        }
+
+        @media screen and (max-width:48em) {
+            .u-mt-100-resp50 {
+                margin-top: 50px;
+            }
+
+            .u-spacer-150-resp50 {
+                height: 50px;
+            }
+        }
+
+        .register-modal-header-title, .login-modal-header-title {
+            margin: 0.67em 0;
+            font-weight: 300;
+            font-size: 32px;
+            color: #3c3c3b;
+            display: block;
+            margin-top: 48px;
+            text-align: center;
+        }
+
+
+        @media screen and (min-width: 58em) {
+            .header-nav > .header-btn {
+                float: left;
+                width: 145px;
+            }
+
+
+            .header-nav {
+                float: right;
+                padding: 17px 0 0 0px;
+            }
+
+
+                .header-nav > .header-cart {
+                    float: left;
+                    margin-left: 5px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="l-header">
+                <div class="header">
+                    <a href="/" class="header-logo">
+                        <h1>Облако знаний</h1>
+                    </a>
+                    <div class="menu-host">
+                        <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script src="/Content/skins/bubble/burger/burger.js"></script><nav class="main-wrapper"><a href="javascript:void(0)" class="menu-burger" onclick="return false;">Меню<span></span></a><ul class="menu-list"><li><a href="/pages/about">О проекте</a></li><li><a href="/news">Новости</a></li><li><a href="/feedback">Помощь</a></li><li><a href="/pages/apps">Скачать</a></li></ul></nav>
+                    </div>
+                    <div class="header-nav">
+                        
+                            <a href="#" class="header-btn header-btn-primary">Каталог</a>
+                        <a href="https://school.imumk.ru/regpin.html" class="header-btn header-btn-primary">Активация</a>
+                        
+                            <a href="https://school.imumk.ru" class="header-btn header-btn-primary">Вход</a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+<style>
+    .borderFind{
+        padding: .3em .5em;
+        height: 2.3em;
+        background-color: #fff;
+        border: 1px solid #706f6f;
+    }
+    #InfoH1{
+        font-size:24px;
+        font-weight: 300;
+        color: #3c3c3b;
+    }
+        @media screen and (max-width: 58em) {
+            .header-nav a[href='/showcase']{
+                display:none !important;
+            }
+        }
+</style>
+<script>
+    window.onload = function (e) {
+        if (document.getElementById('subj').value != ''
+            || document.getElementById('genre').value != ''
+            || document.getElementById('grade').value != ''
+            || document.getElementById('search').value != ''
+        ) {
+            document.getElementById('InfoH1').style.display = 'block';
+            document.getElementById('InfoH1').innerHTML = "Результаты поиска:";
+            document.getElementById('courseslist').style.margin = '0px 0 20px';
+            
+        }
+        
+
+//        pinform
+        
+    };
+
+</script>
+<div class="l-container-4">
+    <h1 class="u-text-center">Витрина
+    </h1>
+
+    <div class="courses u-mt-30">
+        <form class="courses-form form" id="filterform" role="form">
+            <div>
+                <select id="subj" name="subj" onchange="filterform.submit()">
+                    <option value="">Все предметы</option>
+                    <option>Алгебра</option>
+                    <option>Английский язык</option>
+                    <option>Биология</option>
+                    <option>География</option>
+                    <option>Геометрия</option>
+                    <option>Демо-версия</option>
+                    <option>Информатика</option>
+                    <option>История</option>
+                    <option>Литература</option>
+                    <option>Математика</option>
+                    <option>Обществознание</option>
+                    <option>Окружающий мир</option>
+                    <option>Робототехника</option>
+                    <option>Русский язык</option>
+                    <option>Физика</option>
+                    <option>Химия</option>
+                </select>
+            </div>
+            <div>
+                <select id="genre" name="genre" onchange="filterform.submit()">
+                    <option value="">Все жанры</option>
+                        <option>Демо</option>
+                        <option>Задачник</option>
+                        <option>Подготовка к ВПР</option>
+                        <option>Подготовка к ЕГЭ</option>
+                        <option>Рабочая тетрадь</option>
+                </select>
+            </div>
+            <div>
+                <select id="grade" name="grade" onchange="filterform.submit()">
+                    <option value="">Все классы</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                </select>
+            </div>
+            <div>
+                <input class="borderFind" type="text" placeholder="Поиск" id="search" name="search">
+                <button class="courses-form-search-btn" type="submit" title="Найти"></button>
+            </div>
+        </form>
+    </div>
+    <!-- основной юлок -->
+    <h1 class="u-text-center" id="InfoH1" style="display:none"></h1>
+    <ul class="courses-list" id="courseslist">
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/115" alt="Демо-версия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Демо-версия</p>
+                    <p class="sci-grade">5-11 классы</p>
+                    <p class="sci-genre">Демо</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/230">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(115, 'Демо-версия. Интерактивные модели', 'demo')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4306" alt="Демо-версия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Демо-версия</p>
+                    <p class="sci-grade">5-11 классы</p>
+                    <p class="sci-genre">Демо</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/285">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4306, 'Демо-версия. Примеры ЭОР для фронтальной работы', 'demo')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4307" alt="Демо-версия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Демо-версия</p>
+                    <p class="sci-grade">5-11 классы</p>
+                    <p class="sci-genre">Демо</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9023">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4307, 'Демо-версия. Примеры ЭОР для работы за компьютером', 'demo')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/80" alt="Алгебра">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Алгебра</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/103">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(80, 'Алгебра, 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/81" alt="Алгебра">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Алгебра</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/104">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(81, 'Алгебра, 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/82" alt="Алгебра">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Алгебра</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/105">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(82, 'Алгебра, 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4412" alt="Английский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Английский язык</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9011">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4412, 'Тренажёр по подготовке к ЕГЭ-2019. Английский язык', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/55" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">5 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-100">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(55, 'Природоведение. 5 класс. Рабочая тетрадь ', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/61" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">6 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-85">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(61, 'Биология. 6 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/27" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-86">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(27, 'Биология. 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/50" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-87">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(50, 'Биология. 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/79" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">8-11 классы</p>
+                    <p class="sci-genre">Задачник</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-110">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/51" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-88">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(51, 'Биология. 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4415" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9012">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4415, 'Тренажёр по подготовке к ЕГЭ-2019. Биология', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4716" alt="Биология">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Биология</p>
+                    <p class="sci-grade">11 класс</p>
+                    <p class="sci-genre">Подготовка к ВПР</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9024">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/56" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">6 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-91">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(56, 'География. 6 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/57" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-92">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(57, 'География. 7 класс Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/53" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-93">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(53, 'География. 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/58" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-94">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(58, 'География. 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4416" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9013">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4416, 'Тренажёр по подготовке к ЕГЭ-2019. География', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4715" alt="География">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">География</p>
+                    <p class="sci-grade">11 класс</p>
+                    <p class="sci-genre">Подготовка к ВПР</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9025">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/76" alt="Геометрия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Геометрия</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/106">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(76, 'Геометрия, 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/77" alt="Геометрия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Геометрия</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/107">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(77, 'Геометрия, 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/78" alt="Геометрия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Геометрия</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/108">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(78, 'Геометрия, 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/67" alt="Информатика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Информатика</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/109">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(67, 'Информатика, 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/covers/set.png" alt="Информатика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Информатика</p>
+                    <p class="sci-grade">7-9 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/134">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/69" alt="Информатика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Информатика</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/110">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(69, 'Информатика, 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/68" alt="Информатика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Информатика</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/111">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(68, 'Информатика, 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/covers/set.png" alt="Информатика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Информатика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9014">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/48" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">5 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-95">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(48, 'История. 5 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/65" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">6 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-96">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(65, 'История. 6 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/64" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-97">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(64, 'История. 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/62" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-98">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(62, 'История. 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/63" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-99">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(63, 'История. 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4411" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9015">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4411, 'Тренажёр по подготовке к ЕГЭ-2019. История', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4292" alt="История">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">История</p>
+                    <p class="sci-grade">11 класс</p>
+                    <p class="sci-genre">Подготовка к ВПР</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9026">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4552" alt="Литература">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Литература</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9016">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4552, 'Тренажёр по подготовке к ЕГЭ-2019. Литература', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/74" alt="Математика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Математика</p>
+                    <p class="sci-grade">5 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-104">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(74, 'Математика, 5 класс. Рабочая тетрадь ', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/75" alt="Математика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Математика</p>
+                    <p class="sci-grade">6 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-105">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(75, 'Математика, 6 класс. Рабочая тетрадь ', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4406" alt="Математика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Математика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9018">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4406, 'Тренажёр по подготовке к ЕГЭ-2019. Математика (профильный уровень)', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4405" alt="Математика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Математика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9017">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4405, 'Тренажёр по подготовке к ЕГЭ-2019. Математика (базовый уровень)', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4410" alt="Обществознание">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Обществознание</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9019">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4410, 'Тренажёр по подготовке к ЕГЭ-2019. Обществознание', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/covers/set.png" alt="Окружающий мир">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Окружающий мир</p>
+                    <p class="sci-grade">1-4 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/182">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/111" alt="Окружающий мир">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Окружающий мир</p>
+                    <p class="sci-grade">1 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/183">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(111, 'Окружающий мир. 1 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/108" alt="Окружающий мир">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Окружающий мир</p>
+                    <p class="sci-grade">2 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/184">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(108, 'Окружающий мир. 2 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/109" alt="Окружающий мир">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Окружающий мир</p>
+                    <p class="sci-grade">3 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/185">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(109, 'Окружающий мир. 3 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/110" alt="Окружающий мир">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Окружающий мир</p>
+                    <p class="sci-grade">4 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/186">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(110, 'Окружающий мир. 4 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4188" alt="Робототехника">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Робототехника</p>
+                    <p class="sci-grade">1-4 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/258">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4169" alt="Робототехника">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Робототехника</p>
+                    <p class="sci-grade">7-9 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/259">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4170" alt="Робототехника">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Робототехника</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/260">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/covers/set.png" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">5-6 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/263">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4173" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">5 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/261">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4189" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">6 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/262">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/covers/set.png" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">7-9 классы</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-114">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/83" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-111">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(83, 'Русский язык, 7 класс', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/84" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-112">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(84, 'Русский язык, 8 класс', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/85" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-113">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(85, 'Русский язык, 9 класс', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4409" alt="Русский язык">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Русский язык</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9020">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4409, 'Тренажёр по подготовке к ЕГЭ-2019. Русский язык', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/70" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">7 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/112">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(70, 'Физика, 7 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/73" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/113">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(73, 'Физика, 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/72" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/114">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(72, 'Физика, 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4413" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9021">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4413, 'Тренажёр по подготовке к ЕГЭ-2019. Физика', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/133" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Задачник</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/237">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/132" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Задачник</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/236">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/134" alt="Физика">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Физика</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Задачник</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/2069">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/60" alt="Химия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Химия</p>
+                    <p class="sci-grade">8 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-89">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(60, 'Химия. 8 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/59" alt="Химия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Химия</p>
+                    <p class="sci-grade">9 класс</p>
+                    <p class="sci-genre">Рабочая тетрадь</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/-90">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(59, 'Химия. 9 класс. Рабочая тетрадь', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4414" alt="Химия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Химия</p>
+                    <p class="sci-grade">10-11 классы</p>
+                    <p class="sci-genre">Подготовка к ЕГЭ</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9022">Подробнее</a></p>
+                    <p class="sci-controls">
+                                <a href="#" onclick="_try(4414, 'Тренажёр по подготовке к ЕГЭ-2019. Химия', 'anon')" class="pure-button pure-button-primary btn-fluid">Попробовать</a>
+
+                    </p>
+                
+                </div>
+            </li>
+            <li class="courses-sci">
+                <div class="sci-figure">
+                        <img src="/svc/coursecover/4712" alt="Химия">
+
+                </div>
+                <div class="sci-info">
+                    <p class="sci-title">Химия</p>
+                    <p class="sci-grade">11 класс</p>
+                    <p class="sci-genre">Подготовка к ВПР</p>
+                    
+                    
+                    <p class="sci-meta"><a href="/offer/9027">Подробнее</a></p>
+                    <p class="sci-controls">
+                            <span style="font-size:21px;">&nbsp;</span>
+
+                    </p>
+                
+                </div>
+            </li>
+
+    </ul>
+    <!--  -->
+
+</div>
+
+<script src="/js/anon.js?2"></script>
+
+            
+        </div>
+
+<div class="l-footer">
+    <div class="footer">
+        <div class="footer-legal">
+            <p>© <a href="http://physiconlab.ru">ООО «Физикон Лаб»</a>, 2013—2020</p>
+            <p><a rel="nofollow" href="/privacy">Пользовательское соглашение</a></p>
+        </div>
+        <ul class="footer-social">
+            <li><a href="https://twitter.com/oblako_znanij" class="twitter">Twitter</a></li>
+            <li><a href="http://vk.com/oblako_znanij" class="vkontakte">Vkontakte</a></li>
+            <li><a href="https://www.facebook.com/oblakoznanij/?ref=oblako" class="facebook">Facebook</a></li>
+            <li><a href="https://www.instagram.com/oblako_znanij/" class="instagram">Instagram</a></li>
+            
+        </ul>
+        <div class="footer-legal">
+            <p><a href="tel:+74987446757">+7 (499) 322-07-57</a>, <a href="mailto:info@imumk.ru">info@imumk.ru</a></p>
+            <p><a rel="nofollow" href="/regulations">Правила пользования сайтом</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.12/js/adal.min.js"></script>
+<script>
+    var ADAL = new AuthenticationContext({
+        instance: 'https://login.microsoftonline.com/',
+        tenant: 'common', //COMMON OR YOUR TENANT ID
+
+        clientId: '67671726-8a20-4fc6-a32e-5e328473b339', //REPLACE WITH YOUR CLIENT ID
+        redirectUri: 'http://microsoft.imumk.ru/iframelogin/microsoft', //REPLACE WITH YOUR REDIRECT URL
+        //redirectUri: 'http://http://localhost:50263/iframelogin', //REPLACE WITH YOUR REDIRECT URL
+
+        callback: userSignedIn,
+        popUp: false
+    });
+
+    function signIn() {
+        ADAL.login();
+    }
+
+    function userSignedIn(err, token) {
+        console.log('userSignedIn called');
+        if (!err) {
+            console.log("token: " + token);
+            //showWelcomeMessage();
+            //window.
+        }
+        else {
+            console.error("error: " + err);
+        }
+    }
+
+    function showWelcomeMessage() {
+        var user = ADAL.getCachedUser();
+        //var divWelcome = document.getElementById('WelcomeMessage');
+        //divWelcome.innerHTML = "Welcome " + user.profile.name;
+    }
+
+</script>
+
+
+<div class="login-modal-container is-hidden" id="login-modal">
+    <div class="login-modal js-modal">
+        <div class="login-modal-header">
+            <span class="login-modal-header-title">Вход</span>
+            <a class="login-modal-header-close js-close-modal" title="Закрыть">X</a>
+        </div>
+        <div class="login-modal-body login-modal-show1 login-modal-show2">
+            
+            <form action="/login" class="form mod-stacked" id="loginform" method="post" name="loginform">                <fieldset>
+                    <input class="u-fluid" id="Login_Email" name="Login.Email" type="email" placeholder="Введите e-mail" required="">
+                    <input class="u-fluid" id="Login_Password" name="Login.Password" type="password" placeholder="Ваш пароль" required="">
+                    <p class="login-modal-body-fpl u-text-center">
+                        <a class="u-pointer js-show-password-recovery-form">Забыли пароль?</a><br>
+                        <a href="#" class="header-btn header-btn-default js-open-registration-modal">Регистрация</a>
+                        <br>
+                        <a href="#" class="header-btn header-btn-default js-show-activation-link-form">Подтвердить e-mail</a>
+                    </p>
+                    <div class="u-mt-20 u-text-center">
+                        <button class="btn btn-primary" type="submit">Войти</button>
+                    </div>
+                </fieldset>
+</form>            
+            <div class="u-mt-0 u-text-center">
+                <p style="margin-bottom: 2px;">Вход через</p>
+                
+                <a class="register-modal-body-o365l" href="#" onclick="signIn()" title="Вход для пользователей Office365"></a>
+            </div>
+        </div>
+        <div class="login-modal-body login-modal-show1 is-hidden">
+            <div class="login-modal-body-msg" style="text-align:center">
+                <p>Укажите адрес электронной почты, использованный Вами при регистрации. На него будет выслан новый пароль.</p>
+            </div>
+            
+<form action="/passremind" method="post">                <fieldset>
+                    <input class="u-fluid" name="Email" type="email" placeholder="Введите e-mail" required="">
+                    <div class="u-mt-40 u-text-center">
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                </fieldset>
+</form>        </div>
+        <div class="login-modal-body login-modal-show2 is-hidden">
+            <div class="login-modal-body-msg" style="text-align:center">
+                <p>Укажите адрес электронной почты, использованный Вами при регистрации. На него будет выслана ссылка подтверждения учетной записи.</p>
+            </div>
+            
+<form action="/SendActivationLink" method="post">                <fieldset>
+                    <input class="u-fluid" name="Email" type="email" placeholder="Введите e-mail" required="">
+                    <div class="u-mt-40 u-text-center">
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                </fieldset>
+</form>        </div>
+    </div>
+</div>
+<div class="register-modal-container is-hidden" id="registration-modal">
+    <div class="register-modal js-modal">
+        <div class="register-modal-header">
+            <span class="register-modal-header-title">Регистрация</span>
+            <a class="register-modal-header-close js-close-modal" title="Закрыть">X</a>
+        </div>
+        <div class="register-modal-body" style="height:340px;">
+            
+            <form action="/register" class="form mod-stacked" id="regform" method="post" name="regform">                <fieldset style="margin: 0 auto !important; width: 208px;">
+                    <div class="register-modal-body-fields">
+                        
+                        <input type="hidden" name="Register.Role" value="student">
+
+                        <input id="Register_Email" name="Register.Email" type="email" placeholder="Введите e-mail" required="" style="width:100%">
+
+                        <input id="Register_Password" name="Register.Password" type="password" placeholder="Придумайте пароль" required="" style="width:100%">
+
+                    </div>
+
+                    <p class="register-modal-body-ual">
+                        <input type="checkbox" name="Register.Accept" style="margin: 2px 2px 0 0;">Регистрируясь, я принимаю условия <a href="/regulations" target="_blank">пользовательского соглашения.</a>
+                    </p>
+                    <div class="u-mt-40 u-text-center">
+                        <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+                    </div>
+                </fieldset>
+</form>            
+            <div class="u-mt-30 u-text-center">
+                <p style="margin-bottom: 2px;">Вход через</p>
+                
+                <a class="register-modal-body-o365l" href="#" onclick="signIn()" title="Вход для пользователей Office365"></a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login-modal-container is-hidden" id="newpass-modal">
+    <div class="login-modal js-modal">
+        <div class="login-modal-header">
+            <span class="login-modal-header-title">{newpass}</span>
+            <a class="login-modal-header-close js-close-modal" title="Закрыть">X</a>
+        </div>
+        <div class="login-modal-body">
+            <div class="login-modal-body-msg">
+                <p>{newpass}</p>
+            </div>
+            <form class="form mod-stacked">
+                <fieldset>
+                    <input class="u-fluid" name="email" type="email" placeholder="Введите e-mail" required="">
+                    <input class="u-fluid" name="password" type="password" placeholder="Ваш пароль" required="">
+                    <input type="hidden" name="confcode" value="123">
+                    <p class="login-modal-body-fpl u-text-center">
+                        <a href="">Забыли пароль?</a>
+                    </p>
+                    <div class="u-mt-40 u-text-center">
+                        <button class="btn btn-primary" type="submit">Войти</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup-assign-teacher-student">
+    <button class="popup-close">закрыть</button>
+    <a href="/pages/student">
+        <div class="popup-item">
+            <div class="popup-item__img popup-item__img_orange">
+                <img src="/Content/skins/bubble/images/icons/index/student.svg" alt="">
+            </div>
+            <p class="popup-item__text">Я - учащийся</p>
+        </div>
+    </a>
+    <a href="/pages/teacher">
+        <div class="popup-item">
+            <div class="popup-item__img popup-item__img_blue">
+                <img src="/Content/skins/bubble/images/icons/index/teacher.svg" alt="">
+            </div>
+            <p class="popup-item__text">Я - учитель</p>
+        </div>
+    </a>
+</div>
+<div class="popup-assign-teacher-student-mask"></div>
+
+<script src="/Content/skins/bubble/index_popup.js"></script>
+
+
+<div class="popup-manual">
+    <button class="popup-close">закрыть</button>
+    <h3>Инструкции</h3>
+    <a href="/manual">
+        <div class="popup-item">
+            <div class="popup-item__img popup-item__img_orange">
+                <img src="/Content/skins/bubble/images/icons/manual/player.svg" alt="">
+            </div>
+            <p class="popup-item__text">Плеер</p>
+        </div>
+    </a>
+    <a href="/manualcloud">
+        <div class="popup-item">
+            <div class="popup-item__img popup-item__img_blue">
+                <img src="/Content/skins/bubble/images/icons/manual/OZ.svg" alt="">
+            </div>
+            <p class="popup-item__text">Облако знаний</p>
+        </div>
+    </a>
+</div>
+<div class="popup-manual-mask"></div>
+
+<script src="https://www.imumk.ru/Content/skins/bubble/manual_popup.js"></script>
+
+    </div>
+
+        <script>
+            var openDialogAtStartup = '';  
+        </script>
+
+
+    
+    
+    
+
+    <script src="https://www.imumk.ru/Content/skins/bubble/js/libs.js"></script>
+    <script src="https://www.imumk.ru/Content/skins/bubble/js/bundle.js"></script>
+    <script src="https://www.imumk.ru/Content/skins/fslib.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
